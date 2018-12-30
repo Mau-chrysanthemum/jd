@@ -1,0 +1,160 @@
+//公共资源 初始化
+@import "base.less";
+
+#slides{
+    img{
+        width: 100vw;
+     }
+}
+#nav{
+    padding: 0.1rem;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        li{
+            width: 25%;
+            a{
+              display: block;
+              text-align: center;
+              img{
+                  width: 0.4rem;
+                  height: 0.4rem;
+                }
+                p{
+                    font-size: 0.16rem;
+                    margin: 0.05rem 0;
+
+                }
+            }
+        }
+    }
+}
+#main{
+    padding: 0.1rem;
+    background-color: #eee;
+    padding-bottom: 0.6rem;
+    .seckill{
+        background-color: #fff;
+        box-shadow: 0 0 0.01rem #666666;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            line-height: 0.3rem;
+            .left{
+                display: flex;
+                img{
+                    width: 0.2rem;
+                    height: 0.25rem;
+                    margin-left: 0.05rem;
+                }
+                >span{
+                    color: @mian-color;
+                    margin-left: 0.05rem;
+                }
+               .down-time{
+                margin-left: 0.05rem;
+                /* 排除选择器 排除第三 第六个元素 */
+                span:not(:nth-child(3n)){                       
+                    display: inline-block;
+                    width: 0.15rem;
+                    height: 0.15rem;
+                    text-align: center;
+                    line-height: 0.15rem;                       
+                    color:#fff;
+                    background-color: #000;
+                }
+               }
+            }
+            .more{
+                margin-right: 0.1rem;
+            }
+        }
+        .content{
+            ul{
+                display: flex;
+                li{
+                    flex: 1;
+                    a{
+                        display: block;
+                        text-align: center;
+                        img{
+                            width: 1.1rem;
+                            height: 1.1rem;
+                        }
+                        p{
+                            font-size: 0.12rem;
+                            span{
+                                color:@mian-color;
+                            }
+                            del{
+                                color:#ccc;
+                            }
+                        }
+                    }
+                    /* 选择第二个li及以后的li设置左边框 */
+                    & ~ li{
+                        border-left: 1px solid #ccc;
+                    }
+                }
+            } 
+        }
+    }
+    .jd-market{
+        background-color: #fff;
+        box-shadow: 0px 0px 0.01rem #666;
+        margin-top: .1rem;
+        .title{
+            border-bottom: 1px solid #ccc;
+            h4{
+                line-height: .3rem;
+                padding-left: .3rem;
+                font-weight: normal;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: .04rem;
+                    height: .14rem;
+                    background-color: @mian-color;
+                    top: .08rem;
+                    left: .2rem;
+                }
+            }
+        }
+        .content{
+            display: flex;
+            >div{
+                flex: 1;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    ul{
+        display: flex;
+        li{
+            flex: 1;
+            a{
+                display: block;
+                text-align: center;
+                img{
+                    width: .65rem;
+                    height: .5rem;
+                }
+            }
+        }
+    }
+}
